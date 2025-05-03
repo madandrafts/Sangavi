@@ -1,0 +1,106 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  overflow: hidden;
+  background: #111;
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5); /* dark overlay */
+  z-index: 2;
+  pointer-events: none;
+}
+
+.bg-img {
+  width: 20vw;
+  height: 30vh;
+  object-fit: cover;
+  margin: 1vw;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  animation: floatY 6s ease-in-out infinite;
+}
+
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+.background img:nth-child(2) { animation-delay: 1s; animation-duration: 7s; }
+.background img:nth-child(3) { animation-delay: 2s; animation-duration: 8s; }
+.background img:nth-child(4) { animation-delay: 1.5s; animation-duration: 6.5s; }
+.background img:nth-child(5) { animation-delay: 0.5s; animation-duration: 7.5s; }
+.background img:nth-child(6) { animation-delay: 2.5s; animation-duration: 8.5s; }
+.background img:nth-child(7) { animation-delay: 1.2s; animation-duration: 7.2s; }
+.background img:nth-child(8) { animation-delay: 0.8s; animation-duration: 6.8s; }
+.background img:nth-child(9) { animation-delay: 2.2s; animation-duration: 8.2s; }
+.background img:nth-child(10) { animation-delay: 1.8s; animation-duration: 7.8s; }
+.background img:nth-child(11) { animation-delay: 0.3s; animation-duration: 6.3s; }
+
+.center-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  background: #000;
+  color: #fff;
+  padding: 60px 40px;
+  border-radius: 20px;
+  text-align: center;
+  min-width: 320px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.7);
+}
+
+.center-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.dots {
+  font-size: 2rem;
+  letter-spacing: 8px;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .background {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bg-img {
+    width: 80vw;
+    height: 20vh;
+    margin: 2vw 0;
+  }
+  .center-card {
+    min-width: 90vw;
+    padding: 30px 10px;
+  }
+  .center-card h1 {
+    font-size: 1.5rem;
+  }
+  .dots {
+    font-size: 1.2rem;
+  }
+} 
