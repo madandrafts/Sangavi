@@ -92,7 +92,7 @@ body, html {
     width: 100vw;
   }
   .bg-img {
-    width: 400vw;
+    width: 350vw;
     height: 12vh;
     margin: 1vw 0;
     animation: floatYMobile 6s ease-in-out infinite;
