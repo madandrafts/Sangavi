@@ -30,13 +30,16 @@ body, html {
 }
 
 .bg-img {
-  width: 20vw;
-  height: 30vh;
-  object-fit: cover;
-  margin: 1vw;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-  animation: floatY 6s ease-in-out infinite;
+  width: 110vw;
+  height: auto;
+  min-height: 12vh;
+  margin: 0 0 8px 0;
+  border-radius: 0;
+  animation: floatYMobile 6s ease-in-out infinite;
+  display: block;
+  left: 50%;
+  position: relative;
+  transform: translateX(-5vw);
 }
 
 @keyframes floatY {
